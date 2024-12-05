@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algrate</title>
+    <style>
+        .video-background {
+            overflow: hidden;
+        }
+
+        .video-background video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Sticky navigation bar */
+        .navbar {
+            position: relative;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1; /* Places navbar above the video */
+            background: rgba(0, 0, 0, 0.5); /* Transparent background */
+            color: white;
+            padding: 1rem;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Style navigation links */
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 1rem;
+        }
+                .content-block{
+                    position: relative;
+                    z-index: 2;
+                    padding: 20px;
+                    margin-top: 40%;
+                    font-size: 14px;
+                }
+                .downstream{
+                    color: orangered;
+                }
+
+                /* From Uiverse.io by Creatlydev */ 
+          .button {
+            line-height: 1;
+            text-decoration: none;
+            display: inline-flex;
+            border: none;
+            cursor: pointer;
+            align-items: center;
+            gap: 0.75rem;
+            background-color: var(--clr);
+            color: #fff;
+            border-radius: 10rem;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            padding-left: 20px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            transition: background-color 0.3s;
+          }
+
+          .button__icon-wrapper {
+            flex-shrink: 0;
+            width: 25px;
+            height: 25px;
+            position: relative;
+            color: var(--clr);
+            background-color: #fff;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+          }
+
+          .button:hover {
+            background-color: rgba(255, 68, 0, 0.74);
+          }
+
+          .button:hover .button__icon-wrapper {
+            color: #000;
+          }
+
+          .button__icon-svg--copy {
+            position: absolute;
+            transform: translate(-150%, 150%);
+          }
+
+          .button:hover .button__icon-svg:first-child {
+            transition: transform 0.3s ease-in-out;
+            transform: translate(150%, -150%);
+          }
+
+          .button:hover .button__icon-svg--copy {
+            transition: transform 0.3s ease-in-out 0.1s;
+            transform: translate(0); 
+          }
+          .explore-button{
+              margin-top: 10%;
+          }
+          .downstream-part{
+              color: orangered;
+              font-size: 20px;
+              
+          }
+          .achievements{
+              color: rgb(255, 0, 0);
+              font-size: 16px;
+              
+          }
+          .downstream-part:hover{
+              color: black;
+              }
+
+              .carousel-item img {
+                      width: 100%; /* Make the image cover the entire width */
+                      height: 500px; /* Set a fixed height */
+                      object-fit: cover; /* Maintain aspect ratio */
+                  }
+                  .content-block2{
+                      background-color: beige;
+                  }
+                  .content-block3{
+                      margin-top: 5%;
+          }
+          .counter {
+                      width: 50px;
+                      height: 50px;
+                      background-color: beige;
+                      border-radius: 50%;
+                      border: 1px solid black;
+                      display: flex;
+                      align-items: center;
+                      justify-content: center;
+                      font-weight: 500;
+                      float: left;
+                      margin: 30px;
+              }
+              .main{
+                  margin-left: 30%;
+                  margin-top: 5%;
+              }
+
+              </style>
+          </head>
+          <body>
+                  
+
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="vid/construction video 2.mp4" style="width: 100%;">
+        </video>
+        
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="img/new logo .png" width="30%" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="operationsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Operations</a>
+                            <div class="dropdown-menu" aria-labelledby="operationsDropdown">
+                                <a class="dropdown-item" href="#">Upstream</a>
+                                <a class="dropdown-item" href="#">Midstream</a>
+                                <a class="dropdown-item" href="#">Downstream</a>
+                                <a class="dropdown-item" href="#">Power</a>
+                                <a class="dropdown-item" href="#">Infrastructure</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="sustainabilityDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sustainability</a>
+                            <div class="dropdown-menu" aria-labelledby="sustainabilityDropdown">
+                                <a class="dropdown-item" href="#">GOVERNANCE</a>
+                                <a class="dropdown-item" href="#">ENVIRONMENT</a>
+                                <a class="dropdown-item" href="#">FAQS</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+                  <!--Start of Tawk.to Script-->
+          <script type="text/javascript">
+            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+            (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/6731d8aa2480f5b4f59b93b3/1icdbcn59';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+            })();
+            </script>
+            <!--End of Tawk.to Script-->
+     
+            <div class="content-block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <h3 class="downstream">Downstream</h3>
+                            <p>Leveraging over two decades of industry experience, Algrate's downstream expertise includes sourcing products, bulk sales, and distributing petroleum products worldwide. The company operates storage terminals throughout Africa, the Middle East, and Europe, boasting a total capacity exceeding 300 million liters for various refined petroleum products. Recently, the Group has made significant strides in Eastern Africa to bolster the distribution of refined products in the region.</p>
+                            
+                               <div class="explore-button">
+                                <button href="#" class="button" style="--clr: #7808d0">
+                                    <span class="button__icon-wrapper">
+                                      <svg
+                                        viewBox="0 0 14 15"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="button__icon-svg"
+                                        width="10"
+                                      >
+                                        <path
+                                          d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                                          fill="currentColor"
+                                        ></path>
+                                      </svg>
+                                  
+                                      <svg
+                                        viewBox="0 0 14 15"
+                                        fill="none"
+                                        width="10"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="button__icon-svg button__icon-svg--copy"
+                                      >
+                                        <path
+                                          d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                                          fill="currentColor"
+                                        ></path>
+                                      </svg>
+                                    </span>
+                                    Explore All
+                                  </button>
+                                </div>
+                         </div>
+
+                        <div class="col">
+                            <ul>
+                                <div class="achievements">
+                                    <p>Achievements</p>
+                                </div>
+
+                               <div class="downstream-left-container">
+                                <span><a class="downstream-part" href="">400Millions Litres</a></span>
+                                <p>Storage Capacity</p>
+                                <span><a class="downstream-part" href="">1.3Billion + Litres</a></span>
+                                <p>Volume Solid since 2017</p>
+                                <span><a class="downstream-part" href="">ISO 900 IATA</a></span>
+                                <p>strategic partner Industry Certification</p>
+                                <span><a class="downstream-part" href=""> > 500</a></span>
+                                <p>Voltages completed from 2009 till date</p>
+                               </div>
+                            </ul>
+                        </div>
+                     
+                            
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-block2">
+                   <div class="container">
+                    <div id="carouselExample" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/oil and gas photo.jpg" class="d-block w-100" alt="Slide 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/oil and gas new.jpg" class="d-block w-100" alt="Slide 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/oil and gas.jpg" class="d-block w-100" alt="Slide 3">
+                            </div>
+                        </div>
+                    </div>
+                   </div>
+                </div>
+
+                <div class="content-block3">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <h3 class="downstream">UPstream</h3>
+                                <p>Algrate's Upstream division stands out as one of Africa's premier independent exploration and production companies, boasting a varied portfolio of eight oil and gas assets in rich basins throughout the continent. Leading our upstream efforts are Asharami Energy Limited and Sahara Energy Field Holdings UK Limited. These assets span different development phases, from exploratory sites to mature production fields, presenting significant opportunities for favorable returns. Asharami Energy is committed to acquiring, developing, and optimizing oil and gas assets in both established and emerging markets across Africa.</p>
+                                
+                                   <div class="explore-button">
+                                    <button href="#" class="button" style="--clr: #7808d0">
+                                        <span class="button__icon-wrapper">
+                                          <svg
+                                            viewBox="0 0 14 15"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="button__icon-svg"
+                                            width="10"
+                                          >
+                                            <path
+                                              d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                                              fill="currentColor"
+                                            ></path>
+                                          </svg>
+                                      
+                                          <svg
+                                            viewBox="0 0 14 15"
+                                            fill="none"
+                                            width="10"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            class="button__icon-svg button__icon-svg--copy"
+                                          >
+                                            <path
+                                              d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                                              fill="currentColor"
+                                            ></path>
+                                          </svg>
+                                        </span>
+                                        Explore All
+                                      </button>
+                                    </div>
+                             </div>
+    
+                            <div class="col">
+                                <ul>
+                                    <div class="achievements">
+                                        <p>Achievements</p>
+                                    </div>
+    
+                                   <div class="downstream-left-container">
+                                    <span><a class="downstream-part" href="">9 Assets</a></span>
+                                    <p>In prolific basins</p>
+                                    <span><a class="downstream-part" href="">150,000 BPD</a></span>
+                                    <p>6-year target crude oil production</p>
+                                    <span><a class="downstream-part" href="">$550million</a></span>
+                                    <p>Capital investment</p>
+                                    <span><a class="downstream-part" href=""> > 1.5Billion+</a></span>
+                                    <p>2p + 2c Reserves</p>
+                                   </div>
+                                </ul>
+                            </div>
+                         
+                                
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                            <div class="content-block4 mt-5">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <div data-aos="fade-up-right"><img src="img/oil 1.jpg" width="100%" alt=""></div>
+                                         </div>
+                                        <div class="col">
+                                            <div data-aos="zoom-in"><img src="img/oil 2.jpg" width="100%" alt=""></div>
+                                        </div>
+                                        <div class="col">
+                                            <div data-aos="fade-left"> <img src="img/oil 3.jpg" width="100%" alt=""></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content-block3">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h3 class="downstream">Midstream</h3>
+                                            <p>Algrate's Upstream division stands out as one of Africa's premier independent exploration and production companies, boasting a varied portfolio of eight oil and gas assets in rich basins throughout the continent. Leading our upstream efforts are Asharami Energy Limited and Sahara Energy Field Holdings UK Limited. These assets span different development phases, from exploratory sites to mature production fields, presenting significant opportunities for favorable returns. Asharami Energy is committed to acquiring, developing, and optimizing oil and gas assets in both established and emerging markets across Africa.</p>
+                                            
+                                               <div class="explore-button">
+                                                <button href="#" class="button" style="--clr: #7808d0">
+                                                    <span class="button__icon-wrapper">
+                                                      <svg
+                                                        viewBox="0 0 14 15"
+                                                        fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        class="button__icon-svg"
+                                                        width="10"
+                                                      >
+                                                        <path
+                                                          d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                                                          fill="currentColor"
+                                                        ></path>
+                                                      </svg>
+                                                  
+                                                      <svg
+                                                        viewBox="0 0 14 15"
+                                                        fill="none"
+                                                        width="10"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        class="button__icon-svg button__icon-svg--copy"
+                                                      >
+                                                        <path
+                                                          d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+                                                          fill="currentColor"
+                                                        ></path>
+                                                      </svg>
+                                                    </span>
+                                                    Explore All
+                                                  </button>
+                                                </div>
+                                         </div>
+                
+                                        <div class="col">
+                                            <ul>
+                                                <div class="achievements">
+                                                    <p>Achievements</p>
+                                                </div>
+                
+                                               <div class="downstream-left-container">
+                                                <span><a class="downstream-part" href="">18.44 Million Metric Tonnes</a></span>
+                                                <p>of oil equivalent volume of products and crude traded</p>
+                                                <span><a class="downstream-part" href="">77,000 Cubic Metres</a></span>
+                                                <p>LPG vessels capacity owned</p>
+                                                <span><a class="downstream-part" href="">FSRU and LNG Operations</a></span>
+                                               </div>
+                                            </ul>
+                                        </div>
+                                     
+                                            
+                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content-block5">
+                                <div class="container">
+                                    
+                                <div class="main">
+                                    <div class="counter" data-speed="1000">100000</div>
+                                    <div class="counter" data-speed="1000">90000</div>
+                                    <div class="counter" data-speed="1000">80000</div>
+                                    <div class="counter" data-speed="1000">70000</div>
+                            </div>    
+                             
+                              <!-- Element to contain animated typing -->
+                           <span id="element"></span>
+                         
+                           <!-- Load library from the CDN -->
+                           <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+                         
+                           <script>
+                            (() => {
+                         const counter = document.querySelectorAll('.counter');
+                         // covert to array
+                         const array = Array.from(counter);
+                         // select array element
+                         array.map((item) => {
+                             // data layer
+                             let counterInnerText = item.textContent;
+                     
+                             let count = 1;
+                             let speed = item.dataset.speed / counterInnerText
+                             function counterUp() {
+                                 item.textContent = count++
+                                 if (counterInnerText < count) {
+                                     clearInterval(stop);
+                                 }
+                             }
+                             const stop = setInterval(() => {
+                                 counterUp();
+                             }, speed);
+                         })
+                     })()
+                         </script>
+                                </div>
+            </div>
+
+            
+                <script src="../js/jQuery.js"></script>
+                <script src="../js/bootstrap.js"></script>
+
+              <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+              <script>
+                  AOS.init();
+                </script>
+
+          </body>
+          </html>

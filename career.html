@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="bootstrap-4.6.2-dist/css/bootstrap.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.6.2/css/bootstrap.min.css">
+    <style>
+        .banner {
+            background-image: url('careers-banner.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 0;
+        }
+        .job-card:hover {
+            transform: scale(1.02);
+            transition: 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Careers Banner -->
+<section class="banner">
+    <div class="container">
+        <h1>Join Our Team</h1>
+        <p class="lead">Be part of a dynamic and innovative company driving the future of consultancy and engineering.</p>
+    </div>
+</section>
+
+<!-- Company Culture and Benefits -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Why Work With Us?</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Company Culture</h3>
+                <p>We foster an inclusive and collaborative work environment that values diversity, innovation, and teamwork. At our company, every voice is heard, and every idea has the potential to make an impact.</p>
+                <h3>Opportunities for Growth</h3>
+                <p>With initiatives like our in-house academy and mentorship programs, we empower our team to grow personally and professionally.</p>
+            </div>
+            <div class="col-md-6">
+                <h3>Employee Benefits</h3>
+                <ul>
+                    <li>Competitive salary and bonuses</li>
+                    <li>Flexible working hours</li>
+                    <li>Health and wellness programs</li>
+                    <li>Professional development opportunities</li>
+                    <li>Inclusive and dynamic workplace culture</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Job Openings -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Current Job Openings</h2>
+        <div class="row" id="job-list">
+            <!-- Dynamic Job Openings -->
+            <div class="col-md-4 mb-4">
+                <div class="card job-card shadow h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Senior Engineer</h5>
+                        <p class="card-text">Location: New York, USA</p>
+                        <p class="card-text">Lead engineering projects from inception to completion while mentoring junior staff.</p>
+                        <a href="#" class="btn btn-primary">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card job-card shadow h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Project Manager</h5>
+                        <p class="card-text">Location: London, UK</p>
+                        <p class="card-text">Oversee project execution, ensuring timely delivery and client satisfaction.</p>
+                        <a href="#" class="btn btn-primary">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card job-card shadow h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Junior Data Analyst</h5>
+                        <p class="card-text">Location: Remote</p>
+                        <p class="card-text">Support data-driven decision-making processes with detailed analytics and insights.</p>
+                        <a href="#" class="btn btn-primary">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Dynamic job loading can be implemented with JavaScript or server-side integration.
+    // Example: Fetch job data from an API and populate the "job-list" div dynamically.
+</script>
+</body>
+</html>
